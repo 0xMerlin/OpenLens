@@ -70,6 +70,7 @@ jobs:
         env:
           CSC_LINK: ${{ secrets.CSC_LINK }}
           CSC_KEY_PASSWORD: ${{ secrets.CSC_KEY_PASSWORD }}
+          USE_SYSTEM_FPM: true
       - name: Calculate SHA256 checksum
         run: |
           if [ "$RUNNER_OS" == "Windows" ]; then
